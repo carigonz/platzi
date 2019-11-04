@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.ball {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			 background-color: red; 
+			 transition-property: width, height;
+			transition-duration: 350ms;
+			/* transition-delay: 1s;  */
+			transition-timing-function: ease; 
+		}
+		.b:hover {
+			width: 200px;
+			height:200px;
+		}
+		.ball.a {
+			background: red;
+			position: absolute;
+			right: 0;
+		}
+		.ball.b {
+			position: absolute;
+			background: cadetblue;
+			left: 0;
+		}
+		.container {
+			position: relative;
+			border: 1px solid blue;
+			height: 200px;
+		}
+		.container:hover .ball{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="ball a"></div>
+		<div class="ball b"></div>
+	</div>
+	
+</body>
+</html>
