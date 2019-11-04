@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+	</head>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+		
+		/* * {
+			outline: 1px solid red;
+		}  */
+		:root {
+			--violet-lg: #AB88FF;
+			--violet-dk: #8f57fd;
+			--green-dk: #21C08B;
+		}
+		body {
+			margin: 0px;/* 
+			background-color: var(--violet-dk); */
+			font-family: 'Muli', sans-serif;
+			font-size: 16px;
+		}
+		.header {
+			background-color: var(--green-dk);
+			width: 100%;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header__img {
+			width: 200px;
+			margin: 10px 0 0 10px;
+		}
+		.header__menu {
+			margin-right: 30px;
+		}
+		.header__menu ul {
+			display: none;
+			list-style: none;
+			padding: 0px;
+			position: absolute;
+			width: 100px;
+			text-align: right;
+			margin: 0px 0px 0px -14px;
+		}
+		.header__menu:hover ul, 
+		ul:hover {
+			display: block;
+		}
+		.header__menu li {
+			margin: 10px 0px;
+		}
+		.header__menu li a {
+			color:white;
+			text-decoration: none;
+		}
+		.header__menu li a:hover {
+			text-decoration: underline;
+		}
+		.header__menu--profile {
+			margin-top: 15px;
+			margin-right: 30px;
+			display: flex;
+			align-items: center;
+		}
+		.header__menu--profile img{
+			margin-right: 8px;
+			width:40px;
+		}
+		.header__menu--profile P{
+			margin: 0px;
+			color:white;
+		}
+
+		/* login */
+
+		.login {
+			background: linear-gradient(var(--green-dk), var(--violet-lg));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0px 30px;
+			min-height: calc(100vh - 200px);
+		}		
+		.login__container {
+			background-color: rgba(255, 255, 255, 0.1);
+			border: 2px solid white;
+			padding: 40px;
+			border-radius: 60px 68px 40px;
+			color: white;
+			min-height: 700px;
+			width: 300px;
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+
+		.login__container--form {
+			display: flex;
+			flex-direction: column;
+		}
+		.login__container--form label {
+			font-size: 0.8em;
+		}
+		.login__container--remember-me {
+			color: white;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+		.login__container--remember-me a {
+			color: white;
+			font-size: 0.8em;
+			text-decoration: none;
+		}
+		.login__container--remember-me a:hover {
+			text-decoration: underline;
+		}
+
+		.login__container--social-media > div{
+			display: flex;
+			align-items: center;
+			font-size: 0.8em;
+			margin-bottom: 10px;
+		}
+		.login__container--social-media > div > img{
+			width:30px;
+			margin-right: 10px;
+			color: white;
+		}
+		.login__container--register {
+			font-size: 0.8em;
+		}
+		.login__container--register a{
+			font-size: 1em;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.login__container--register a:hover{
+			text-decoration: underline;
+		}
+		.input {
+			background-color: transparent;
+			border: 0px;
+			border-bottom: 2px solid white;
+			font-family: 'Muli';
+			font-size: 1em;
+			margin-bottom: 20px;
+			padding: 0px 20px;
+			outline: none;
+			height: 50px;
+		}
+		::placeholder {
+			color: white;
+		}
+		.button {
+			background-color: rgba(255, 255, 255, 0.1);
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			color: white;
+			font-size: 1em;
+			font-weight: bold;
+			font-family: 'Muli';
+			height: 50px;
+			letter-spacing: 1px;
+			margin: 10px 0px;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.login__container{
+				background-color: transparent;
+				border: none;
+				padding: 0px;
+				width:90vw;
+			}
+			.footer {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+		}
+
+		/* footer */
+		.footer {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			width: 100vw;
+			background-color: var(--violet-lg);
+		
+		}
+		.footer a {
+			color: white;
+			cursor: pointer;
+			font-size: 0.8em;
+			padding-left: 30px;
+			text-decoration: none;
+			margin-bottom: 10px;
+		}
+		.footer a:hover {
+			text-decoration: underline;
+		}
+
+	</style>
+	<body>
+			<header class="header">
+				<img src="https://static.platzi.com/media/tmp/class-files/git/curso-frontend-escuelajs/curso-frontend-escuelajs-menu-desplegable/menu-desplegable/logo-platzi-video-BW2.png" alt="logo" class="header__img">
+				<div class="header__menu">
+					<div class="header__menu--profile">
+						<img src="https://static.platzi.com/media/tmp/class-files/git/curso-frontend-escuelajs/curso-frontend-escuelajs-menu-desplegable/menu-desplegable/user-icon.png">
+						<p>Perfil</p>
+					</div>
+					<ul>
+						<li><a href="/">Cuenta</a></li>
+						<li><a href="/">Cerrar sesion</a></li>
+					</ul>
+				</div>
+			</header>
+			<main>
+				<section class="login">
+					<section class="login__container">
+						<h2>inicie sesion</h2>
+						<form class="login__container--form" action="#">
+							<input type="text" class="input" placeholder="Correo">
+							<input type="text" class="input" name="" id="" placeholder="Contraseña">
+							<button class="button">Iniciar sesión</button>
+							<div class="login__container--remember-me">
+								<label>
+									<input type="checkbox" name="" id="">Recuerdame
+								</label>
+								<a href="/">Olvidé mi contraseña</a>
+							</div>
+						</form>
+						<section class="login__container--social-media">
+								<div><img src="https://img.icons8.com/ios/32/000000/google-plus.png">Inicia sesión en google</div>
+								<div><img src="https://img.icons8.com/metro/26/000000/twitter.png">Inicia sesión en twitter</div>
+						</section>
+						<p class="login__container--register">No tienes ninguna cuenta? <a href="/">Registrate</a></p>
+					</section>
+				</section>
+			</main>
+			<footer class="footer">
+				<a href=·"#">Terminos de uso</a>
+				<a href="#">Declaracion de privacidad</a>
+				<a href="#">Centro de ayuda</a>
+			</footer>
+		
+	</body>
+</html>
